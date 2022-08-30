@@ -1,7 +1,17 @@
 import React from "react"
 //import logo from "./logo.svg"
 import "./App.css"
+
 import Layout from "./components/layout/Layout";
+import About from "./components/templates/About";
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+
 /*
 class LambdaDemo extends Component {
   constructor(props) {
@@ -34,14 +44,19 @@ class LambdaDemo extends Component {
 
 */
 
-
 const App = () => {
-  
-  return (
-    <Layout>
-      Je suis la
-    </Layout>
-  );
+
+    return (
+        <Router>
+            <Layout>
+                <Switch>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                </Switch>
+            </Layout>
+        </Router>
+    );
 }
 
 

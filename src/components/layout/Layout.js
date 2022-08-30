@@ -12,6 +12,7 @@ const Layout = ({children}) => {
             <Row>
                 { children }
             </Row>
+            
         </Container>
     )
 }

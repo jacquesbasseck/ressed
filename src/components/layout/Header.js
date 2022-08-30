@@ -1,8 +1,10 @@
 import React from 'react';
-import { Col, Container, Row, Navbar, Nav } from 'react-bootstrap';
+import { Col, Container, Row, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Logo from '../templates/Logo';
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa";
 import styled from 'styled-components';
+
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -76,7 +78,21 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand href="#home">Accueil</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">À propos</Nav.Link>
+                        <Nav.Link href="#home"></Nav.Link>
+
+                        <NavDropdown title="À propos" id="navbarScrollingDropdown">
+                            <NavDropdown.Item href="#action3"><Link to="/about">Qui sommes nous ?</Link></NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action4">Notre mission</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action4">Organigramme</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action4">Historique</NavDropdown.Item>
+
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+                        </NavDropdown>
+
                         <Nav.Link href="#features">Membres</Nav.Link>
                         <Nav.Link href="#pricing">Sciences & Éducation</Nav.Link>
                         <Nav.Link href="#pricing">Actualités</Nav.Link>
